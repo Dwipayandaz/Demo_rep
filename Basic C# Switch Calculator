@@ -1,0 +1,76 @@
+# Basic C# Switch for building arithmetic function program
+
+namespace FirstProject
+{
+    internal class Calswitch
+    {
+        static void Main()
+        {
+            Console.WriteLine("Basic Calculator");
+            Console.WriteLine("-----------------");
+
+            Console.WriteLine("1. Add");
+            Console.WriteLine("2. Substact");
+            Console.WriteLine("3. Multiply");
+            Console.WriteLine("4. Divide");
+
+            Console.WriteLine("Enter the choice (1 to 4):");
+            int Choice = Int32.Parse(Console.ReadLine());
+
+            double num1, num2, num3;
+
+            switch (Choice)
+            {
+                case 1:
+                    Console.WriteLine("Enter the first number:");
+                    num1 = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Enter the second number:");
+                    num2 = Convert.ToDouble(Console.ReadLine());
+
+                    num3 = num1 + num2;
+                    Console.WriteLine("Sum = {0}", num3);
+                    break;
+
+                case 2:
+                    Console.WriteLine("Enter the first number:");
+                    num1 = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Enter the second number:");
+                    num2 = Convert.ToDouble(Console.ReadLine());
+
+                    num3 = num1 - num2;
+                    Console.WriteLine("Difference = {0}", num3);
+                    break;
+
+
+                case 3:
+                    Console.WriteLine("Enter the first number:");
+                    num1 = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Enter the second number:");
+                    num2 = Convert.ToDouble(Console.ReadLine());
+
+                    num3 = num1 * num2;
+                    Console.WriteLine("Product = {0}", num3);
+                    break;
+
+                case 4:
+                    Console.WriteLine("Enter the first number:");
+                    num1 = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Enter the second number:");
+                    num2 = Convert.ToDouble(Console.ReadLine());
+
+                    num3 = num1 / num2;
+                    Console.WriteLine("Division = {0}", num3);
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid Choice");
+                    break;
+
+            }
+        }
+    }
+}
